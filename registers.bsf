@@ -1,0 +1,99 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 64 64 232 224)
+	(text "registers" (rect 5 0 47 12)(font "Arial" ))
+	(text "inst" (rect 8 144 25 156)(font "Arial" ))
+	(port
+		(pt 0 136)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 131 35 143)(font "Arial" ))
+		(line (pt 0 136)(pt 16 136)(line_width 1))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "rd" (rect 0 0 9 12)(font "Arial" ))
+		(text "rd" (rect 21 19 30 31)(font "Arial" ))
+		(line (pt 0 24)(pt 16 24)(line_width 1))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "wr1" (rect 0 0 16 12)(font "Arial" ))
+		(text "wr1" (rect 21 35 37 47)(font "Arial" ))
+		(line (pt 0 40)(pt 16 40)(line_width 1))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "wr2" (rect 0 0 16 12)(font "Arial" ))
+		(text "wr2" (rect 21 51 37 63)(font "Arial" ))
+		(line (pt 0 56)(pt 16 56)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "addr1[3..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "addr1[3..0]" (rect 21 91 74 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "addr2[3..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "addr2[3..0]" (rect 21 107 74 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 96 0)
+		(input)
+		(text "wdata[7..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "wdata[7..0]" (rect 88 24 100 78)(font "Arial" )(vertical))
+		(line (pt 96 0)(pt 96 16)(line_width 3))
+	)
+	(port
+		(pt 80 160)
+		(output)
+		(text "r1data[7..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "r1data[7..0]" (rect 72 80 84 136)(font "Arial" )(vertical))
+		(line (pt 80 160)(pt 80 144)(line_width 3))
+	)
+	(port
+		(pt 112 160)
+		(output)
+		(text "r2data[7..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "r2data[7..0]" (rect 104 80 116 136)(font "Arial" )(vertical))
+		(line (pt 112 160)(pt 112 144)(line_width 3))
+	)
+	(port
+		(pt 168 24)
+		(output)
+		(text "io[7..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "io[7..0]" (rect 113 19 147 31)(font "Arial" ))
+		(line (pt 168 24)(pt 152 24)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 144)(line_width 1))
+	)
+)

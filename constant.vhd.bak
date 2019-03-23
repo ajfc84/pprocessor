@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity constant is
+	port(s: IN std_logic;
+		a : IN std_logic_vector(3 downto 0);
+		oprnd: OUT std_logic_vector(3 downto 0));
+end constant;
+
+architecture beh of constant is
+begin
+	process(s,a1,a2)
+	begin
+		if(s='0')then
+			oprnd<="ZZZZZZZZ";
+		elsif(s='1')then
+			oprnd<="0000"a2;
+		end if;
+	end process;
+end beh;

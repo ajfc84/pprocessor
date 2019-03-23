@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity registers is
+	port(clk, rd, wr1, wr2: IN std_logic;
+		addr1, addr2: IN std_logic_vector(3 downto 0);
+		wdata: IN std_logic_vector(7 downto 0);
+		r1data, r2data, io: OUT std_logic_vector(7 downto 0));
+end registers;
+
+architecture beh of registers is
+	type regs16b_type is
+		array(0 to 15) of std_logic_vector(7 downto 0);
+	signal regs16b: regs16b_type;
+begin
+	process(clk)
+	begin
+		if(clk='1' and clk'event)then
+			if(rd='1')then
+				r1data<=regs16b(conv_integer(addr1));
+				r2data<=regs16b(conv_integer(addr2));
+			elsif(rd='0')then
+				r1data<="ZZZZZZZZ";
+				r2data<="ZZZZZZZZ";
+			end if;
+			if(wr1='1')then
+				regs16b(conv_integer(addr1))<=wdata;
+			elsif(wr2='1')then
+				regs16b(conv_integer(addr2))<=wdata;
+			end if;
+			io<=regs16b(15);
+		end if;
+	end process;
+end beh;
